@@ -34,4 +34,5 @@ public class RegistrationController {
     public void delete(@PathVariable("ticketCode") String ticketCode) {
         registrationRepository.deleteByTicketCode(ticketCode);
     }
+
 }
