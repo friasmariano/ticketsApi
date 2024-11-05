@@ -1,17 +1,10 @@
 
 package com.pluralsight.springboot.tickets.events;
 
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class OrganizerRepository {
-    private final List<Organizer> organizers = List.of(
-      new Organizer(101, "Globomantics", "Globomantics Technology Corporation"),
-      new Organizer(102, "Carved Rock", "Carved Rock Sports Equipment")
-    );
+public interface OrganizerRepository extends JpaRepository<Organizer, Integer> {
 
-    public List<Organizer> findAll() {
-        return organizers;
-    }
 }
